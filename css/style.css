@@ -5,3 +5,42 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* GENERICS */
+body {
+  font-family: sans-serif;
+}
+
+/* UTILS */
+.container {
+  min-width: 576px;
+}
+
+.flex {
+  display: flex;
+}
+
+/* HEADER */
+#navbar {
+  background-color: #0084fd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hmenu {
+  color: white;
+}
+
+#navbar > nav {
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+main {
+  margin-top: 150px;
+}
