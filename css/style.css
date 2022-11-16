@@ -11,9 +11,13 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
+a {
+  display: inline-block;
+}
+
 /* UTILS */
 .container {
-  max-width: 480px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -27,10 +31,7 @@ body {
   flex-direction: column;
 }
 
-#demoapp,
-#planning,
-#testimonials,
-#benefits {
+section {
   padding: 50px 0;
 }
 
@@ -52,8 +53,20 @@ body {
   background-color: white;
 }
 
+/* BUTTONS */
+.btn-large {
+  text-decoration: none;
+  font-weight: bold;
+  color: #9792e4;
+  background-color: white;
+  padding: 15px 60px;
+  border-radius: 50px;
+  margin: 30px 0;
+}
+
 /* HEADER */
 #navbar {
+  padding: 0;
   background-color: #0084fd;
   position: fixed;
   top: 0;
@@ -122,4 +135,49 @@ main {
   color: white;
   text-align: center;
   margin-bottom: 50px;
+}
+
+/* About us */
+#about-us h2 {
+  font-size: 2.5rem;
+  color: #9792e4;
+}
+
+#about-us h2,
+#about-us p {
+  margin-bottom: 30px;
+}
+
+/* Get started */
+#get-started {
+  text-align: center;
+  background-color: #9792e4;
+  color: white;
+}
+
+#get-started h4 {
+  font-size: 1.3rem;
+  color: #d5d4f4;
+  margin-bottom: 20px;
+}
+
+#get-started h3 {
+  font-size: 2rem;
+}
+
+#get-started h2 {
+  font-size: 3.5rem;
+  color: #fdc15f;
+  margin: 30px 0;
+}
+
+/* FOOTER */
+#footer {
+  background-color: #333333;
+  color: white;
+  text-align: center;
+}
+
+#footer p {
+  margin-bottom: 30px;
 }
