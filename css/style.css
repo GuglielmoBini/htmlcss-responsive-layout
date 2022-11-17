@@ -15,6 +15,20 @@ a {
   display: inline-block;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+span {
+  margin-right: 5px;
+}
+
+p {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
 /* UTILS */
 .container {
   max-width: 580px;
@@ -46,13 +60,13 @@ section:nth-child(even) {
 
 .col {
   flex-basis: 100%;
-  height: 450px;
+  min-height: 300px;
   padding: 10px;
 }
 
 .card {
   height: 100%;
-  padding: 10px;
+  padding: 20px 30px;
   background-color: #b5ddff;
   border-radius: 20px;
 }
@@ -63,6 +77,28 @@ section:nth-child(even) {
 }
 
 /* BUTTONS */
+
+.btn {
+  text-decoration: none;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-blue {
+  background-color: #0084fd;
+}
+
+.btn-dl {
+  width: 50px;
+  height: 50px;
+  color: black;
+  background-color: #9792e4;
+  border-radius: 50%;
+  line-height: 50px;
+}
+
 .btn-large {
   text-decoration: none;
   font-weight: bold;
@@ -100,12 +136,48 @@ main {
 }
 
 /* Demoapp */
-.col-l {
+/* .col-l {
   flex-basis: 100%;
   height: 800px;
+} */
+
+#demoapp .card {
+  text-align: center;
+}
+
+#demoapp .card h2 {
+  color: #0084fd;
+  margin: 30px 0;
+}
+
+#demoapp .card p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #5a6e7f;
+}
+
+.fa-6x {
+  color: #0084fd;
+  margin-top: 20px;
 }
 
 /* Planning */
+#planning .col:first-child {
+  color: white;
+}
+
+#planning .card {
+  text-align: center;
+}
+
+#planning h2 {
+  font-size: 2.5rem;
+  margin: 50px 0;
+}
+
+#planning h3 {
+  margin: 30px 0;
+}
 
 /* Testimonials */
 #testimonials {
@@ -195,7 +267,10 @@ main {
 
   #demoapp .col.col-l {
     flex-basis: calc(100% / 3 * 2);
-    height: 450px;
+  }
+
+  .phone-img {
+    max-width: 60%;
   }
 
   #demoapp .col {
