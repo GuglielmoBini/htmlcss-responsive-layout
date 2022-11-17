@@ -17,8 +17,8 @@ a {
 
 /* UTILS */
 .container {
-  max-width: 100%;
-  padding: 0 60px;
+  max-width: 580px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
@@ -34,6 +34,14 @@ a {
 
 section {
   padding: 50px 0;
+}
+
+section:nth-child(even) {
+  background-color: #9792e4;
+}
+
+.row {
+  margin: -10px;
 }
 
 .col {
@@ -66,7 +74,7 @@ section {
 }
 
 /* HEADER */
-#navbar {
+header {
   padding: 0;
   background-color: #0084fd;
   position: fixed;
@@ -80,11 +88,10 @@ section {
   color: white;
 }
 
-#navbar > nav {
+header nav {
   height: 100px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
 }
 
 /* MAIN */
@@ -99,9 +106,6 @@ main {
 }
 
 /* Planning */
-#planning {
-  background-color: #9792e4;
-}
 
 /* Testimonials */
 #testimonials {
@@ -128,9 +132,6 @@ main {
 }
 
 /* Benefits */
-#benefits {
-  background-color: #9792e4;
-}
 
 #benefits h2 {
   font-size: 2rem;
@@ -153,7 +154,6 @@ main {
 /* Get started */
 #get-started {
   text-align: center;
-  background-color: #9792e4;
   color: white;
 }
 
@@ -187,14 +187,14 @@ main {
 /* MEDIA QUERY */
 
 /* Formato Tablet */
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .container {
-    max-width: 100%;
+    max-width: 900px;
     padding: 0 25px;
   }
 
   #demoapp .col.col-l {
-    flex-basis: calc(100% / 1.5);
+    flex-basis: calc(100% / 3 * 2);
     height: 450px;
   }
 
@@ -238,5 +238,20 @@ main {
 }
 
 /* Formato Desktop */
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+
+  #planning .col {
+    flex-basis: 50%;
+  }
+
+  #planning .col:nth-child(2) {
+    padding-top: 300px;
+  }
+
+  #benefits .col {
+    flex-basis: calc(100% / 3);
+  }
 }
