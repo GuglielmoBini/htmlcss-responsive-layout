@@ -21,6 +21,7 @@ img {
 }
 
 span {
+  display: inline-block;
   margin-right: 5px;
 }
 
@@ -61,7 +62,7 @@ section:nth-child(even) {
 .col {
   flex-basis: 100%;
   min-height: 300px;
-  padding: 10px;
+  padding: 20px 30px;
 }
 
 .card {
@@ -71,23 +72,50 @@ section:nth-child(even) {
   border-radius: 20px;
 }
 
+#demoapp,
+#planning .card {
+  text-align: center;
+}
+
 #planning .card,
 #benefits .card {
   background-color: white;
 }
 
+.img-circle {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  margin: 20px 0;
+  background-size: cover;
+  background-position: center;
+}
+
 /* BUTTONS */
 
-.btn {
+.btn-a,
+.btn-b {
+  font-weight: bold;
   text-decoration: none;
   color: white;
-  padding: 10px 50px;
   border-radius: 20px;
   margin-bottom: 30px;
 }
 
+.btn-a {
+  padding: 10px 50px;
+}
+
+.btn-b {
+  padding: 10px 20px;
+}
+
 .btn-blue {
   background-color: #0084fd;
+}
+
+.btn-violet {
+  background-color: #9792e4;
 }
 
 .btn-dl {
@@ -136,13 +164,9 @@ main {
 }
 
 /* Demoapp */
-/* .col-l {
-  flex-basis: 100%;
-  height: 800px;
-} */
 
-#demoapp .card {
-  text-align: center;
+#demoapp .col-l {
+  text-align: start;
 }
 
 #demoapp .card h2 {
@@ -166,10 +190,6 @@ main {
   color: white;
 }
 
-#planning .card {
-  text-align: center;
-}
-
 #planning h2 {
   font-size: 2.5rem;
   margin: 50px 0;
@@ -186,15 +206,26 @@ main {
 
 #testimonials .card {
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50px;
 }
 
-.img-circle {
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
+#testimonials .card span {
+  font-weight: bold;
 }
 
-.img-circle img {
+.img-guy {
+  background-image: url(../img/testimonial1.jpg);
+}
+
+.img-girl {
+  background-image: url(../img/testimonial2.jpg);
+}
+
+.img-guyb {
+  background-image: url(../img/testimonial3.jpg);
 }
 
 .col-c {
@@ -231,15 +262,40 @@ main {
   margin-bottom: 50px;
 }
 
+#benefits .card span {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #9792e4;
+  margin-top: 20px;
+}
+
+#benefits .card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #9792e4;
+  margin: 20px 0;
+}
+
 /* About us */
 #about-us h2 {
   font-size: 2.5rem;
   color: #9792e4;
+  margin-bottom: 30px;
 }
 
-#about-us h2,
 #about-us p {
-  margin-bottom: 30px;
+  font-size: 1.3rem;
+}
+
+#about-us .col:nth-child(2) p {
+  color: #9792e4;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.img-boss {
+  background-image: url(../img/about.jpg);
 }
 
 /* Get started */
@@ -284,6 +340,10 @@ main {
     padding: 0 25px;
   }
 
+  .col {
+    padding: 10px;
+  }
+
   #demoapp .col.col-l {
     flex-basis: calc(100% / 3 * 2);
   }
@@ -296,17 +356,46 @@ main {
     flex-basis: calc(100% / 3);
   }
 
-  #planning .col {
-    height: 1000px;
+  #planning img {
+    margin: 0 auto;
+  }
+
+  #testimonials .card {
+    text-align: start;
+  }
+
+  #testimonials .card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #testimonials .card div:last-child {
+    flex-basis: 60%;
+  }
+
+  #testimonials .card span {
+    font-size: 1.4rem;
+  }
+
+  .img-circle {
+    height: 220px;
+    width: 220px;
   }
 
   #benefits .col {
     flex-basis: 50%;
   }
 
+  #about-us h2 {
+    font-size: 4rem;
+  }
+
+  #about-us .flex {
+    justify-content: space-between;
+  }
+
   #about-us .col {
-    flex-basis: 50%;
-    height: 500px;
+    flex-basis: 45%;
   }
 
   #get-started h3 {
@@ -333,15 +422,48 @@ main {
     max-width: 1300px;
   }
 
+  .col {
+    padding: 20px;
+  }
+
+  .col-l .card {
+    display: flex;
+  }
+
+  .col-l .card div:last-child {
+    align-self: flex-end;
+  }
+
+  .phone-img {
+    max-width: 100%;
+  }
+
+  #planning .flex {
+    justify-content: center;
+    gap: 20px;
+  }
+
   #planning .col {
-    flex-basis: 50%;
+    flex-basis: 35%;
   }
 
   #planning .col:nth-child(2) {
-    padding-top: 300px;
+    padding-top: 335px;
+  }
+
+  #testimonials .card div:last-child {
+    flex-basis: 75%;
   }
 
   #benefits .col {
     flex-basis: calc(100% / 3);
+  }
+
+  #about-us .col:first-child {
+    flex-basis: 60%;
+  }
+
+  #about-us .col:last-child {
+    flex-basis: 30%;
   }
 }
