@@ -184,6 +184,25 @@ main {
   text-align: center;
 }
 
+#testimonials .card {
+  color: white;
+}
+
+.img-circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.img-circle img {
+}
+
+.col-c {
+  flex-basis: calc(100% / 3);
+  min-width: 100%;
+  padding: 10px;
+}
+
 #testimonials h3,
 #testimonials h2,
 #testimonials p {
@@ -279,10 +298,6 @@ main {
 
   #planning .col {
     height: 1000px;
-  }
-
-  #testimonials .col {
-    height: 250px;
   }
 
   #benefits .col {
